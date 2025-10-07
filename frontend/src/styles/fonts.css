@@ -1,0 +1,21 @@
+/* src/styles/fonts.css */
+
+/* Pastikan font sans-serif dan monospace dimuat dengan benar */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+/* Definisikan font-family untuk tema */
+.font-sans {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", "Courier New", monospace;
+}
+
+/* Pastikan semua elemen mewarisi font */
+body,
+html,
+#root {
+  font-family: inherit;
+}
