@@ -246,35 +246,6 @@ const Login = ({ onClose, onShowRegister }) => {
         ))}
       </motion.div>
 
-      {/* Tombol kembali */}
-      <motion.div
-        className="absolute top-4 left-4 z-20 md:top-6 md:left-6"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.8 }}
-      >
-        <Link
-          to="/"
-          className={`flex items-center bg-white/80 backdrop-blur-sm px-3 py-2 rounded-full hover:bg-white transition-all duration-300 text-sm md:text-base shadow-md ${fontClass} ${currentTheme.textClass}`}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-            />
-          </svg>
-          Kembali
-        </Link>
-      </motion.div>
-
       {/* Logo SIKep */}
       <motion.div
         className="absolute top-4 right-4 z-20 md:top-6 md:right-6"

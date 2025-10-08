@@ -227,7 +227,7 @@ export const ThemeProvider = ({ children }) => {
   const [colorTheme, setColorTheme] = useState(() => {
     // Mendapatkan tema dari localStorage atau menggunakan tema default
     const savedTheme = localStorage.getItem("colorTheme");
-    return savedTheme || "default";
+    return savedTheme || "ocean"; // ← PERUBAHAN 1: Default ke "ocean"
   });
 
   // Efek untuk menyimpan tema ke localStorage saat berubah
@@ -241,7 +241,7 @@ export const ThemeProvider = ({ children }) => {
   };
 
   // Mendapatkan tema aktif
-  const currentTheme = colorThemes[colorTheme] || colorThemes.default;
+  const currentTheme = colorThemes[colorTheme] || colorThemes.ocean; // ← PERUBAHAN 2: Fallback ke "ocean"
 
   return (
     <ThemeContext.Provider
@@ -252,7 +252,7 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-// Hook untuk menggunakan tema
+// Hook untuk menggunakan tema (tetap sama)
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {
